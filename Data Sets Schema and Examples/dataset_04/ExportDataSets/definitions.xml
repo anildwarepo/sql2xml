@@ -1,0 +1,80 @@
+<TemplateDefinition xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Templates">
+  <ApprovalRuleCategories xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows.Approval" />
+  <ApprovalRuleDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows.Approval" />
+  <AttachmentTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <Attachments xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <ComponentGroupTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common.Groups" />
+  <CustomFields xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <Datasources xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Datasources">
+    <d2p1:Datasource>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">2</Id>
+      <d2p1:DatasourceType>OpenLink</d2p1:DatasourceType>
+      <d2p1:Name>Open Link</d2p1:Name>
+    </d2p1:Datasource>
+  </Datasources>
+  <ExternalSourceTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <FormDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms" />
+  <Groups xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <ImportanceLevels xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <NotificationTemplates xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Notifications" />
+  <PartyTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <QueryIntegrations xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations">
+    <d2p1:QueryIntegration>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">1181</Id>
+      <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+      <d2p1:Active>true</d2p1:Active>
+      <d2p1:DatasourceId>2</d2p1:DatasourceId>
+      <d2p1:Draft>false</d2p1:Draft>
+      <d2p1:IgnoreClientMatterSecurity>false</d2p1:IgnoreClientMatterSecurity>
+      <d2p1:IsIntegrationTypeUserSelected>false</d2p1:IsIntegrationTypeUserSelected>
+      <d2p1:Name>dataset_04</d2p1:Name>
+      <d2p1:QueryBuilder i:type="d2p1:OpenLinkQueryBuilder">
+        <d2p1:DataSetSettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" i:type="d5p1:DataSetSettings">
+          <d5p1:AdvancedExpression i:nil="true" />
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+          <d5p1:CollectionType>All</d5p1:CollectionType>
+          <d5p1:ComputedFieldFlags xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:DataSourceId i:nil="true" />
+          <d5p1:ExternalParameters xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.ExternalParameters" />
+          <d5p1:FieldColumnTitles xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:FieldNames xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+          <d5p1:OperationId i:nil="true" />
+          <d5p1:ParameterExpressions />
+          <d5p1:ReturnDistinctRows>false</d5p1:ReturnDistinctRows>
+        </d2p1:DataSetSettings>
+        <d2p1:DslQuerySettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings">
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:type="d6p1:CountFunction" />
+          <d5p1:ComplexSourceQuestion xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+          <d5p1:Conditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" i:nil="true" />
+          <d5p1:Description i:nil="true" />
+          <d5p1:Distinct>false</d5p1:Distinct>
+          <d5p1:EnforceSecurity>true</d5p1:EnforceSecurity>
+          <d5p1:ExternalParameters i:nil="true" />
+          <d5p1:FormAnswerConditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" i:nil="true" />
+          <d5p1:Joined xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" />
+          <d5p1:QueryLimit>500</d5p1:QueryLimit>
+          <d5p1:ReferenceForm xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+          <d5p1:RuntimeParameters i:nil="true" />
+          <d5p1:SelectFields i:nil="true" />
+          <d5p1:SortFields i:nil="true" />
+          <d5p1:Source xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" i:type="d6p1:VirtualTable">
+            <d6p1:Alias>Date_Time_Zone_spike</d6p1:Alias>
+            <d6p1:OperationId>Date_Time_Zone_spike</d6p1:OperationId>
+          </d5p1:Source>
+        </d2p1:DslQuerySettings>
+        <d2p1:RunAsDSLQuery>true</d2p1:RunAsDSLQuery>
+      </d2p1:QueryBuilder>
+      <d2p1:QueryIntegrationObjectType>None</d2p1:QueryIntegrationObjectType>
+      <d2p1:QueryIntegrationType>Value</d2p1:QueryIntegrationType>
+      <d2p1:useDeletedFlagForParties>true</d2p1:useDeletedFlagForParties>
+    </d2p1:QueryIntegration>
+  </QueryIntegrations>
+  <RequirementGroups xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Requests" />
+  <SchemaVersion>600</SchemaVersion>
+  <ScoreDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Scores" />
+  <ScoreLevelSets xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Scores" />
+  <TeamRoles xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <Users xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <VirtualTables xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.VirtualTables" />
+  <WorkflowDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+</TemplateDefinition>

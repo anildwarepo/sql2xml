@@ -1,0 +1,184 @@
+To generate the mapping rules from the given SQL query to the XML structure, we need to analyze the SQL query components and map them to the corresponding XML elements. Here are the mapping rules based on the provided examples:
+
+### Common Mapping Rules for Both Examples:
+
+1. **Query Limit:**
+   - SQL: `TOP 500`
+   - XML: `<d5p1:QueryLimit>500</d5p1:QueryLimit>`
+
+2. **Source Table:**
+   - SQL: `[dbo].[Clients] AS [Clients]`
+   - XML: 
+     ```xml
+     <d5p1:Source i:type="d6p1:SystemTable">
+       <d6p1:Alias>Clients</d6p1:Alias>
+       <d6p1:TableId>Clients</d6p1:TableId>
+     </d5p1:Source>
+     ```
+
+3. **Select Fields:**
+   - SQL: `[Clients].[ClientId] AS [0]`, `[Clients].[Name] AS [1]`, etc.
+   - XML: Each selected field in SQL is represented as a `<d5p1:SelectExpression>` with a `<d5p1:ColumnName>` and `<d5p1:Expression>` in XML.
+
+### Specific Mapping Rules for Example 1:
+
+1. **Condition (WHERE Clause):**
+   - SQL: `[Clients].[Name] NOT LIKE '%...%'`
+   - XML: 
+     ```xml
+     <d6p1:DataSetFilterCondition>
+       <d6p1:Left i:type="d5p1:EncodedSystemTableField">
+         <d5p1:Value>#:#system#:#Clients#:#Clients#:#Name#:#</d5p1:Value>
+       </d6p1:Left>
+       <d6p1:Operator>NotContains</d6p1:Operator>
+       <d6p1:Right i:type="d6p1:ParameterOperand">
+         <d6p1:DefaultValue i:type="d10p1:string">name</d6p1:DefaultValue>
+         <d6p1:Name>p0</d6p1:Name>
+         <d6p1:ValueType>String</d6p1:ValueType>
+       </d6p1:Right>
+     </d6p1:DataSetFilterCondition>
+     ```
+
+### Specific Mapping Rules for Example 2:
+
+1. **Join Condition:**
+   - SQL: `INNER JOIN [dbo].[Work] AS [Matters] ON [Matters].[Client_Id] = [Clients].[Id]`
+   - XML: 
+     ```xml
+     <d6p1:JoinedTable>
+       <d6p1:JoinCondition>
+         <d8p1:Left i:type="d5p1:EncodedSystemTableField">
+           <d5p1:Value>#:#system#:#Matters#:#Matters#:#ClientIdFk#:#</d5p1:Value>
+         </d8p1:Left>
+         <d8p1:Operator>Equals</d8p1:Operator>
+         <d8p1:Right i:type="d5p1:EncodedSystemTableField">
+           <d5p1:Value>#:#system#:#Clients#:#Clients#:#Id#:#</d5p1:Value>
+         </d8p1:Right>
+       </d6p1:JoinCondition>
+       <d6p1:Table i:type="d6p1:SystemTable">
+         <d6p1:Alias>Matters</d6p1:Alias>
+         <d6p1:TableId>Matters</d6p1:TableId>
+       </d6p1:Table>
+     </d6p1:JoinedTable>
+     ```
+
+2. **Condition (WHERE Clause):**
+   - SQL: `[Matters].[Name] != @p__dsl__p0`
+   - XML: 
+     ```xml
+     <d6p1:DataSetFilterCondition>
+       <d6p1:Left i:type="d5p1:EncodedSystemTableField">
+         <d5p1:Value>#:#system#:#Matters#:#Matters#:#Name#:#</d5p1:Value>
+       </d6p1:Left>
+       <d6p1:Operator>NotEquals</d6p1:Operator>
+       <d6p1:Right i:type="d6p1:ParameterOperand">
+         <d6p1:DefaultValue i:type="d10p1:string">name</d6p1:DefaultValue>
+         <d6p1:Name>p0</d6p1:Name>
+         <d6p1:ValueType>String</d6p1:ValueType>
+       </d6p1:Right>
+     </d6p1:DataSetFilterCondition>
+     ```
+
+3. **Order By Clause:**
+   - SQL: `ORDER BY [Clients].[Name] ASC`
+   - XML: 
+     ```xml
+     <d5p1:SortFields>
+       <d5p1:SortField>
+         <d5p1:Direction>ASCENDING</d5p1:Direction>
+         <d5p1:Field i:type="d5p1:EncodedSystemTableField">
+           <d5p1:Value>#:#system#:#Clients#:#Clients#:#Name#:#</d5p1:Value>
+         </d5p1:Field>
+       </d5p1:SortField>
+     </d5p1:SortFields>
+     ```
+
+These mapping rules are derived from the structure of the SQL query and the corresponding XML elements in the provided examples. The rules can be used to transform similar SQL queries into the XML format expected by the system.
+
+
+
+### DataSetFilterCondition and FormAnswerConditions
+For XML nodes with DataSetFilterCondition and FormAnswerConditions, fill these nodes only if you need to based on the SQL query.
+Use only 
+Generate full XML of the given SQL query. Do not miss or omit any element or attribute.
+
+
+
+### Use the below XML Schema to generate the XML where needed.
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations"
+           xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets"
+           xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions"
+           xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+  
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" />
+
+  <xs:element name="QueryIntegrations" type="d2p1:QueryIntegrationsType" />
+
+  <xs:complexType name="QueryIntegrationsType">
+    <xs:sequence>
+      <xs:element name="QueryIntegration" type="d2p1:QueryIntegrationType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryIntegrationType">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer" />
+      <xs:element name="SchemaVersion" type="xs:integer" />
+      <xs:element name="Active" type="xs:boolean" />
+      <xs:element name="DatasourceId" type="xs:integer" />
+      <xs:element name="Draft" type="xs:boolean" />
+      <xs:element name="IgnoreClientMatterSecurity" type="xs:boolean" />
+      <xs:element name="IsIntegrationTypeUserSelected" type="xs:boolean" />
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="QueryBuilder" type="d2p1:QueryBuilderType" />
+      <xs:element name="QueryIntegrationObjectType" type="xs:string" />
+      <xs:element name="QueryIntegrationType" type="xs:string" />
+      <xs:element name="useDeletedFlagForParties" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryBuilderType">
+    <xs:complexContent>
+      <xs:extension base="d2p1:OpenLinkQueryBuilderType">
+        <xs:sequence>
+          <xs:element name="RunAsDSLQuery" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="OpenLinkQueryBuilderType" abstract="true">
+    <xs:sequence>
+      <xs:element name="DataSetSettings" type="d5p1:DataSetSettingsType" />
+      <xs:element name="DslQuerySettings" type="d2p1:DslQuerySettingsType" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataSetSettingsType">
+    <xs:sequence>
+      <!-- Define elements and types within DataSetSettings based on your XML structure -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DslQuerySettingsType">
+    <xs:sequence>
+      <!-- Define elements and types within DslQuerySettings based on your XML structure -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define additional complex types and elements as necessary -->
+
+</xs:schema>
+
+
+### Use the SQL Query Metadata to generate the XML where needed.
+
+

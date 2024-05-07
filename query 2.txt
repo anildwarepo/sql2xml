@@ -1,0 +1,20 @@
+SELECT
+TOP 500
+     [Form Answers].[QuestionId] AS [Form AnswersQuestionId],
+     [Form Answers].[Form_Id] AS [Form AnswersFormId],
+     [Form Answers].[AnswerValue] AS [Form AnswersFormAnswerValue],
+     [Form Answers].[AnswerDisplayValue] AS [Form AnswersAnswerDisplayValue],
+     [Form Answers].[QuestionName] AS [Form AnswersQuestionName],
+     [Form Answers].[KeyValueAnswers] AS [Form AnswersKeyValueAnswers]
+FROM
+     [dbo].[Requests] AS [Requests]
+     LEFT OUTER JOIN [dbo].[subrequests] AS [Requests 1_##_SubRequests] ON [Requests 1_##_SubRequests].[parentrequest_id] = [Requests].[Id]
+
+     LEFT OUTER JOIN [dbo].[Requests] AS [Requests 1_##_Requests] ON [Requests 1_##_Requests].[Deleted] = 0 AND ([Requests 1_##_Requests].[Id] = [Requests 1_##_SubRequests].[subrequest_id])
+
+     LEFT OUTER JOIN [dbo].[FormAnswers] AS [Form Answers] ON ([Form Answers].[Form_Id] = [Requests 1_##_Requests].[Form_Id] AND [Form Answers].[QuestionName] IN (@p__dsl__question_names0_0,@p__dsl__question_names0_1,@p__dsl__question_names0_2,@p__dsl__question_names0_3,@p__dsl__question_names0_4,@p__dsl__question_names0_5,@p__dsl__question_names0_6))
+
+
+WHERE (
+     [Requests].[Id] = @p__dsl__p0)
+      AND ([Requests].[Deleted] = 0)

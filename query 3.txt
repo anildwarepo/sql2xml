@@ -1,0 +1,11 @@
+SELECT
+TOP 500
+     [Attachments].[Id] AS [0]
+FROM
+     [dbo].[Requests] AS [Requests]
+     LEFT OUTER JOIN [dbo].[Attachments] AS [Attachments] ON [Attachments].[RootComponent_Id] = [Requests].[Component_Id]
+
+
+WHERE (
+     [Requests].[Id] = @p__dsl__p0)
+      AND ([Requests].[Deleted] = 0)

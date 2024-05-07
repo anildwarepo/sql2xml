@@ -1,0 +1,82 @@
+<QueryIntegrations xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations">
+    <d2p1:QueryIntegration>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">1178</Id>
+      <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+      <d2p1:Active>true</d2p1:Active>
+      <d2p1:DatasourceId>2</d2p1:DatasourceId>
+      <d2p1:Draft>false</d2p1:Draft>
+      <d2p1:IgnoreClientMatterSecurity>false</d2p1:IgnoreClientMatterSecurity>
+      <d2p1:IsIntegrationTypeUserSelected>false</d2p1:IsIntegrationTypeUserSelected>
+      <d2p1:Name>Dataset_01</d2p1:Name>
+      <d2p1:QueryBuilder i:type="d2p1:OpenLinkQueryBuilder">
+        <d2p1:DataSetSettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" i:type="d5p1:DataSetSettings">
+          <d5p1:AdvancedExpression i:nil="true" />
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+          <d5p1:CollectionType>All</d5p1:CollectionType>
+          <d5p1:ComputedFieldFlags xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:DataSourceId i:nil="true" />
+          <d5p1:ExternalParameters xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.ExternalParameters" />
+          <d5p1:FieldColumnTitles xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:FieldNames xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+          <d5p1:OperationId i:nil="true" />
+          <d5p1:ParameterExpressions />
+          <d5p1:ReturnDistinctRows>false</d5p1:ReturnDistinctRows>
+        </d2p1:DataSetSettings>
+        <d2p1:DslQuerySettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings">
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+          <d5p1:ComplexSourceQuestion xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+          <d5p1:Conditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions">
+            <d6p1:AdvancedExpression i:nil="true" />
+            <d6p1:CollectionType>All</d6p1:CollectionType>
+            <d6p1:Conditions>
+              <d6p1:DataSetFilterCondition z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <d6p1:Left z:Id="i2" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Clients#:#Clients#:#Name#:#</d5p1:Value>
+                </d6p1:Left>
+                <d6p1:Operator>NotContains</d6p1:Operator>
+                <d6p1:Right z:Id="i3" i:type="d6p1:ParameterOperand">
+                  <d6p1:DefaultValue xmlns:d10p1="http://www.w3.org/2001/XMLSchema" i:type="d10p1:string">name</d6p1:DefaultValue>
+                  <d6p1:External>false</d6p1:External>
+                  <d6p1:Name>p0</d6p1:Name>
+                  <d6p1:ValueType>String</d6p1:ValueType>
+                </d6p1:Right>
+                <d6p1:OrdinalIdx>1</d6p1:OrdinalIdx>
+              </d6p1:DataSetFilterCondition>
+            </d6p1:Conditions>
+          </d5p1:Conditions>
+          <d5p1:Description i:nil="true" />
+          <d5p1:Distinct>false</d5p1:Distinct>
+          <d5p1:EnforceSecurity>true</d5p1:EnforceSecurity>
+          <d5p1:ExternalParameters i:nil="true" />
+          <d5p1:FormAnswerConditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" i:nil="true" />
+          <d5p1:Joined xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" />
+          <d5p1:QueryLimit>500</d5p1:QueryLimit>
+          <d5p1:ReferenceForm xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+          <d5p1:RuntimeParameters i:nil="true" />
+          <d5p1:SelectFields>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Client Id (Clients)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Clients#:#Clients#:#ClientId#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Name (Clients)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Clients#:#Clients#:#Name#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Description (Clients)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Clients#:#Clients#:#Description#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+          </d5p1:SelectFields>
+          <d5p1:SortFields i:nil="true" />
+          <d5p1:Source xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" i:type="d6p1:SystemTable">
+            <d6p1:Alias>Clients</d6p1:Alias>
+            <d6p1:TableId>Clients</d6p1:TableId>
+          </d5p1:Source>
+        </d2p1:DslQuerySettings>
+        <d2p1:RunAsDSLQuery>true</d2p1:RunAsDSLQuery>
+      </d2p1:QueryBuilder>
+      <d2p1:QueryIntegrationObjectType>None</d2p1:QueryIntegrationObjectType>
+      <d2p1:QueryIntegrationType>Datatable</d2p1:QueryIntegrationType>
+      <d2p1:useDeletedFlagForParties>true</d2p1:useDeletedFlagForParties>
+    </d2p1:QueryIntegration>
+  </QueryIntegrations>

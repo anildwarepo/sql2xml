@@ -1,0 +1,479 @@
+<TemplateDefinition xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Templates">
+  <ApprovalRuleCategories xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows.Approval" />
+  <ApprovalRuleDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows.Approval" />
+  <AttachmentTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <Attachments xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <ComponentGroupTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common.Groups" />
+  <CustomFields xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <Datasources xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Datasources">
+    <d2p1:Datasource>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">2</Id>
+      <d2p1:DatasourceType>OpenLink</d2p1:DatasourceType>
+      <d2p1:Name>Open Link</d2p1:Name>
+    </d2p1:Datasource>
+  </Datasources>
+  <ExternalSourceTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <FormDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms">
+    <d2p1:FormDefinition>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">15</Id>
+      <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+      <d2p1:CancelSectionId i:nil="true" />
+      <d2p1:DisplayDefaultCommentFieldOnCancel>true</d2p1:DisplayDefaultCommentFieldOnCancel>
+      <d2p1:DisplayedScoreLevelLabel i:nil="true" />
+      <d2p1:Draft>false</d2p1:Draft>
+      <d2p1:Header>
+        <d2p1:DisplayLinkedRequest>false</d2p1:DisplayLinkedRequest>
+        <d2p1:HeaderItems>
+          <d2p1:HeaderItem z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+            <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+            <d2p1:DynamicExpression xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" z:Id="i2">
+              <d7p1:DynamicExpressionItems>
+                <d7p1:DynamicExpressionItem z:Id="i3" i:type="d7p1:RequestDynamicExpressionItem">
+                  <d7p1:CustomFieldKey i:nil="true" />
+                  <d7p1:Property>Id</d7p1:Property>
+                </d7p1:DynamicExpressionItem>
+              </d7p1:DynamicExpressionItems>
+            </d2p1:DynamicExpression>
+            <d2p1:Id>18e3e61e8cd-22c-d194019371</d2p1:Id>
+            <d2p1:Title>Untitled field</d2p1:Title>
+          </d2p1:HeaderItem>
+          <d2p1:HeaderItem z:Id="i4" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+            <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+            <d2p1:DynamicExpression xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" z:Id="i5">
+              <d7p1:DynamicExpressionItems>
+                <d7p1:DynamicExpressionItem z:Id="i6" i:type="d7p1:LiteralDynamicExpressionItem">
+                  <d7p1:Value i:nil="true" />
+                </d7p1:DynamicExpressionItem>
+              </d7p1:DynamicExpressionItems>
+            </d2p1:DynamicExpression>
+            <d2p1:Id>18e3e624723-22d-12e065f926b</d2p1:Id>
+            <d2p1:Title>Id</d2p1:Title>
+          </d2p1:HeaderItem>
+        </d2p1:HeaderItems>
+        <d2p1:ItemsPerColumn>1</d2p1:ItemsPerColumn>
+        <d2p1:Visibility>Expanded</d2p1:Visibility>
+      </d2p1:Header>
+      <d2p1:Name>datetime-timezone-spike</d2p1:Name>
+      <d2p1:Pages>
+        <d2p1:Page z:Id="i7" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+          <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+          <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+          <d2p1:DisplayCriteria>
+            <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+            <d2p1:DisplayConditions>
+              <d2p1:DisplayModeConditions>
+                <d2p1:Conditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+              </d2p1:DisplayModeConditions>
+            </d2p1:DisplayConditions>
+            <d2p1:HideConditions xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+            <d2p1:ReadOnlyConditions xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+          </d2p1:DisplayCriteria>
+          <d2p1:ExpansionCriteria xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.ExpansionConfiguration">
+            <d6p1:ExpansionModeConditions>
+              <d6p1:ExpansionModeConditions>
+                <d6p1:Conditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d6p1:ExpansionMode>Collapsed</d6p1:ExpansionMode>
+              </d6p1:ExpansionModeConditions>
+            </d6p1:ExpansionModeConditions>
+          </d2p1:ExpansionCriteria>
+          <d2p1:Id>18e3e628e78-231-106d106d101</d2p1:Id>
+          <d2p1:Items>
+            <d2p1:FormComponentItem z:Id="i8" xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions" i:type="d7p1:DateTimeInputQuestion">
+              <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+              <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+              <d7p1:DisplayCriteria>
+                <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+                <d2p1:DisplayConditions>
+                  <d2p1:DisplayModeConditions>
+                    <d2p1:Conditions xmlns:d11p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                      <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                      <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                      <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                    </d2p1:Conditions>
+                    <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+                  </d2p1:DisplayModeConditions>
+                </d2p1:DisplayConditions>
+                <d2p1:HideConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d2p1:ReadOnlyConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+              </d7p1:DisplayCriteria>
+              <d7p1:DisplayWidth>Auto</d7p1:DisplayWidth>
+              <d7p1:HelpText i:nil="true" />
+              <d7p1:Id>18e3e62c1ee-232-1823a9d2a7</d7p1:Id>
+              <d7p1:Name>Date_Date_Only</d7p1:Name>
+              <d7p1:ParentQuestionId i:nil="true" />
+              <d7p1:QuestionDefaultValueSource xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" i:nil="true" />
+              <d7p1:QuestionDefaultValueSourceId i:nil="true" />
+              <d7p1:ReadOnly>false</d7p1:ReadOnly>
+              <d7p1:RequestCustomFieldKey i:nil="true" />
+              <d7p1:RequestFieldType>None</d7p1:RequestFieldType>
+              <d7p1:RequirementConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.RequirementConfiguration" i:nil="true" />
+              <d7p1:RequirementCriteria>
+                <d7p1:QuestionRequirementCriterion>
+                  <d7p1:RequirementGroupKey>A</d7p1:RequirementGroupKey>
+                  <d7p1:Roles xmlns:d10p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+                </d7p1:QuestionRequirementCriterion>
+              </d7p1:RequirementCriteria>
+              <d7p1:ShowRequiredIndicator>false</d7p1:ShowRequiredIndicator>
+              <d7p1:ShowSpinner>false</d7p1:ShowSpinner>
+              <d7p1:Title>Date_Date_Only</d7p1:Title>
+              <d7p1:ValueIntegrationDefinition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions.Integrations" i:nil="true" />
+              <d7p1:DefaultValue i:nil="true" />
+              <d7p1:Mode>DateOnly</d7p1:Mode>
+              <d7p1:SupportsTimeZone>false</d7p1:SupportsTimeZone>
+              <d7p1:ValidationConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+              </d7p1:ValidationConditions>
+              <d7p1:ValidationErrorMessage i:nil="true" />
+            </d2p1:FormComponentItem>
+            <d2p1:FormComponentItem z:Id="i9" xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions" i:type="d7p1:DateTimeInputQuestion">
+              <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+              <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+              <d7p1:DisplayCriteria>
+                <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+                <d2p1:DisplayConditions>
+                  <d2p1:DisplayModeConditions>
+                    <d2p1:Conditions xmlns:d11p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                      <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                      <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                      <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                    </d2p1:Conditions>
+                    <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+                  </d2p1:DisplayModeConditions>
+                </d2p1:DisplayConditions>
+                <d2p1:HideConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d2p1:ReadOnlyConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+              </d7p1:DisplayCriteria>
+              <d7p1:DisplayWidth>Auto</d7p1:DisplayWidth>
+              <d7p1:HelpText i:nil="true" />
+              <d7p1:Id>18e3e63c0a1-231-984a1a4464</d7p1:Id>
+              <d7p1:Name>Date_Date_And_Time_No_User_Timezone</d7p1:Name>
+              <d7p1:ParentQuestionId i:nil="true" />
+              <d7p1:QuestionDefaultValueSource xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" i:nil="true" />
+              <d7p1:QuestionDefaultValueSourceId i:nil="true" />
+              <d7p1:ReadOnly>false</d7p1:ReadOnly>
+              <d7p1:RequestCustomFieldKey i:nil="true" />
+              <d7p1:RequestFieldType>None</d7p1:RequestFieldType>
+              <d7p1:RequirementConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.RequirementConfiguration" i:nil="true" />
+              <d7p1:RequirementCriteria>
+                <d7p1:QuestionRequirementCriterion>
+                  <d7p1:RequirementGroupKey>A</d7p1:RequirementGroupKey>
+                  <d7p1:Roles xmlns:d10p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+                </d7p1:QuestionRequirementCriterion>
+              </d7p1:RequirementCriteria>
+              <d7p1:ShowRequiredIndicator>false</d7p1:ShowRequiredIndicator>
+              <d7p1:ShowSpinner>false</d7p1:ShowSpinner>
+              <d7p1:Title>Date_Date_And_Time_No_User_Timezone</d7p1:Title>
+              <d7p1:ValueIntegrationDefinition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions.Integrations" i:nil="true" />
+              <d7p1:DefaultValue i:nil="true" />
+              <d7p1:Mode>DateAndTime</d7p1:Mode>
+              <d7p1:SupportsTimeZone>false</d7p1:SupportsTimeZone>
+              <d7p1:ValidationConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+              </d7p1:ValidationConditions>
+              <d7p1:ValidationErrorMessage i:nil="true" />
+            </d2p1:FormComponentItem>
+            <d2p1:FormComponentItem z:Id="i10" xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions" i:type="d7p1:DateTimeInputQuestion">
+              <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+              <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+              <d7p1:DisplayCriteria>
+                <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+                <d2p1:DisplayConditions>
+                  <d2p1:DisplayModeConditions>
+                    <d2p1:Conditions xmlns:d11p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                      <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                      <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                      <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                    </d2p1:Conditions>
+                    <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+                  </d2p1:DisplayModeConditions>
+                </d2p1:DisplayConditions>
+                <d2p1:HideConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d2p1:ReadOnlyConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+              </d7p1:DisplayCriteria>
+              <d7p1:DisplayWidth>Auto</d7p1:DisplayWidth>
+              <d7p1:HelpText i:nil="true" />
+              <d7p1:Id>18e3e65091d-234-954ca188e2</d7p1:Id>
+              <d7p1:Name>Date_Date_And_Time_User_Timezone</d7p1:Name>
+              <d7p1:ParentQuestionId i:nil="true" />
+              <d7p1:QuestionDefaultValueSource xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" i:nil="true" />
+              <d7p1:QuestionDefaultValueSourceId i:nil="true" />
+              <d7p1:ReadOnly>false</d7p1:ReadOnly>
+              <d7p1:RequestCustomFieldKey i:nil="true" />
+              <d7p1:RequestFieldType>None</d7p1:RequestFieldType>
+              <d7p1:RequirementConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.RequirementConfiguration" i:nil="true" />
+              <d7p1:RequirementCriteria>
+                <d7p1:QuestionRequirementCriterion>
+                  <d7p1:RequirementGroupKey>A</d7p1:RequirementGroupKey>
+                  <d7p1:Roles xmlns:d10p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+                </d7p1:QuestionRequirementCriterion>
+              </d7p1:RequirementCriteria>
+              <d7p1:ShowRequiredIndicator>false</d7p1:ShowRequiredIndicator>
+              <d7p1:ShowSpinner>false</d7p1:ShowSpinner>
+              <d7p1:Title>Date_Date_And_Time_User_Timezone</d7p1:Title>
+              <d7p1:ValueIntegrationDefinition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions.Integrations" i:nil="true" />
+              <d7p1:DefaultValue i:nil="true" />
+              <d7p1:Mode>DateAndTime</d7p1:Mode>
+              <d7p1:SupportsTimeZone>true</d7p1:SupportsTimeZone>
+              <d7p1:ValidationConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+              </d7p1:ValidationConditions>
+              <d7p1:ValidationErrorMessage i:nil="true" />
+            </d2p1:FormComponentItem>
+            <d2p1:FormComponentItem z:Id="i11" xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions" i:type="d7p1:DateTimeInputQuestion">
+              <d2p1:ContainerSortOrder>0</d2p1:ContainerSortOrder>
+              <d2p1:HideInPrintMode>false</d2p1:HideInPrintMode>
+              <d7p1:DisplayCriteria>
+                <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+                <d2p1:DisplayConditions>
+                  <d2p1:DisplayModeConditions>
+                    <d2p1:Conditions xmlns:d11p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                      <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                      <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                      <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                    </d2p1:Conditions>
+                    <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+                  </d2p1:DisplayModeConditions>
+                </d2p1:DisplayConditions>
+                <d2p1:HideConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+                <d2p1:ReadOnlyConditions xmlns:d9p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+              </d7p1:DisplayCriteria>
+              <d7p1:DisplayWidth>Auto</d7p1:DisplayWidth>
+              <d7p1:HelpText i:nil="true" />
+              <d7p1:Id>18e3e65964f-237-c091b99c16</d7p1:Id>
+              <d7p1:Name>Date_Time_Only</d7p1:Name>
+              <d7p1:ParentQuestionId i:nil="true" />
+              <d7p1:QuestionDefaultValueSource xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DynamicExpressions" i:nil="true" />
+              <d7p1:QuestionDefaultValueSourceId i:nil="true" />
+              <d7p1:ReadOnly>false</d7p1:ReadOnly>
+              <d7p1:RequestCustomFieldKey i:nil="true" />
+              <d7p1:RequestFieldType>None</d7p1:RequestFieldType>
+              <d7p1:RequirementConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.RequirementConfiguration" i:nil="true" />
+              <d7p1:RequirementCriteria>
+                <d7p1:QuestionRequirementCriterion>
+                  <d7p1:RequirementGroupKey>A</d7p1:RequirementGroupKey>
+                  <d7p1:Roles xmlns:d10p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+                </d7p1:QuestionRequirementCriterion>
+              </d7p1:RequirementCriteria>
+              <d7p1:ShowRequiredIndicator>false</d7p1:ShowRequiredIndicator>
+              <d7p1:ShowSpinner>false</d7p1:ShowSpinner>
+              <d7p1:Title>Date_Time_Only</d7p1:Title>
+              <d7p1:ValueIntegrationDefinition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions.Integrations" i:nil="true" />
+              <d7p1:DefaultValue i:nil="true" />
+              <d7p1:Mode>TimeOnly</d7p1:Mode>
+              <d7p1:SupportsTimeZone>false</d7p1:SupportsTimeZone>
+              <d7p1:ValidationConditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions">
+                <AdvancedExpression xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+                <CollectionType xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions">All</CollectionType>
+                <Conditions xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Expressions" />
+              </d7p1:ValidationConditions>
+              <d7p1:ValidationErrorMessage i:nil="true" />
+            </d2p1:FormComponentItem>
+          </d2p1:Items>
+          <d2p1:Title>Time Zone</d2p1:Title>
+        </d2p1:Page>
+      </d2p1:Pages>
+      <d2p1:QueryIntegrations xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations" i:nil="true" />
+      <d2p1:RequestNameQuestion xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Questions" i:nil="true" />
+      <d2p1:RequestNameTemplate i:nil="true" />
+      <d2p1:ScoreDefinitionIds xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <d2p1:ScoreDefinitions xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Scores" />
+      <d2p1:ScoreDisplayFormat>Numeric</d2p1:ScoreDisplayFormat>
+      <d2p1:ScoreLevelBadge>
+        <d2p1:DisplayCriteria>
+          <d2p1:AlwaysHidden>false</d2p1:AlwaysHidden>
+          <d2p1:DisplayConditions>
+            <d2p1:DisplayModeConditions>
+              <d2p1:Conditions xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+              <d2p1:DisplayMode>Visible</d2p1:DisplayMode>
+            </d2p1:DisplayModeConditions>
+          </d2p1:DisplayConditions>
+          <d2p1:HideConditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+          <d2p1:ReadOnlyConditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Conditions" i:nil="true" />
+        </d2p1:DisplayCriteria>
+      </d2p1:ScoreLevelBadge>
+      <d2p1:ScoreMappings xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Forms.Scoring" />
+      <d2p1:Subtitle>Subtitle</d2p1:Subtitle>
+      <d2p1:Title i:nil="true" />
+      <d2p1:Variables />
+    </d2p1:FormDefinition>
+  </FormDefinitions>
+  <Groups xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <ImportanceLevels xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Common" />
+  <NotificationTemplates xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Notifications" />
+  <PartyTypes xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <QueryIntegrations xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations">
+    <d2p1:QueryIntegration>
+      <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">1180</Id>
+      <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+      <d2p1:Active>true</d2p1:Active>
+      <d2p1:DatasourceId>2</d2p1:DatasourceId>
+      <d2p1:Draft>false</d2p1:Draft>
+      <d2p1:IgnoreClientMatterSecurity>false</d2p1:IgnoreClientMatterSecurity>
+      <d2p1:IsIntegrationTypeUserSelected>false</d2p1:IsIntegrationTypeUserSelected>
+      <d2p1:Name>dataset_03</d2p1:Name>
+      <d2p1:QueryBuilder i:type="d2p1:OpenLinkQueryBuilder">
+        <d2p1:DataSetSettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" i:type="d5p1:DataSetSettings">
+          <d5p1:AdvancedExpression i:nil="true" />
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+          <d5p1:CollectionType>All</d5p1:CollectionType>
+          <d5p1:ComputedFieldFlags xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:DataSourceId i:nil="true" />
+          <d5p1:ExternalParameters xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.ExternalParameters" />
+          <d5p1:FieldColumnTitles xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+          <d5p1:FieldNames xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+          <d5p1:OperationId i:nil="true" />
+          <d5p1:ParameterExpressions />
+          <d5p1:ReturnDistinctRows>false</d5p1:ReturnDistinctRows>
+        </d2p1:DataSetSettings>
+        <d2p1:DslQuerySettings xmlns:d5p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings">
+          <d5p1:AggregationFunction xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+          <d5p1:ComplexSourceQuestion xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+          <d5p1:Conditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions">
+            <d6p1:AdvancedExpression i:nil="true" />
+            <d6p1:CollectionType>All</d6p1:CollectionType>
+            <d6p1:Conditions>
+              <d6p1:DataSetFilterCondition z:Id="i12" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <d6p1:Left z:Id="i13" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Requests#:#Requests#:#Name#:#</d5p1:Value>
+                </d6p1:Left>
+                <d6p1:Operator>NotContains</d6p1:Operator>
+                <d6p1:Right z:Id="i14" i:type="d6p1:ParameterOperand">
+                  <d6p1:DefaultValue xmlns:d10p1="http://www.w3.org/2001/XMLSchema" i:type="d10p1:string">name</d6p1:DefaultValue>
+                  <d6p1:External>false</d6p1:External>
+                  <d6p1:Name>p0</d6p1:Name>
+                  <d6p1:ValueType>String</d6p1:ValueType>
+                </d6p1:Right>
+                <d6p1:OrdinalIdx>1</d6p1:OrdinalIdx>
+              </d6p1:DataSetFilterCondition>
+            </d6p1:Conditions>
+          </d5p1:Conditions>
+          <d5p1:Description i:nil="true" />
+          <d5p1:Distinct>false</d5p1:Distinct>
+          <d5p1:EnforceSecurity>true</d5p1:EnforceSecurity>
+          <d5p1:ExternalParameters i:nil="true" />
+          <d5p1:FormAnswerConditions xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" i:nil="true" />
+          <d5p1:Joined xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source">
+            <d6p1:JoinedTable>
+              <d6p1:JoinCondition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i15" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <d8p1:Left z:Id="i16" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Comments#:#Comments#:#RootComponentIdFk#:#</d5p1:Value>
+                </d8p1:Left>
+                <d8p1:Operator>Equals</d8p1:Operator>
+                <d8p1:Right z:Id="i17" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Requests#:#Requests#:#ComponentId#:#</d5p1:Value>
+                </d8p1:Right>
+              </d6p1:JoinCondition>
+              <d6p1:Table i:type="d6p1:SystemTable">
+                <d6p1:Alias>Comments</d6p1:Alias>
+                <d6p1:TableId>Comments</d6p1:TableId>
+              </d6p1:Table>
+            </d6p1:JoinedTable>
+            <d6p1:JoinedTable>
+              <d6p1:JoinCondition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i18" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <d8p1:Left z:Id="i19" i:type="d8p1:DataSetCondition">
+                  <d8p1:Left z:Id="i20" i:type="d5p1:EncodedSystemTableField">
+                    <d5p1:Value>#:#system#:#Activities#:#Activities#:#ComponentId#:#</d5p1:Value>
+                  </d8p1:Left>
+                  <d8p1:Operator>Equals</d8p1:Operator>
+                  <d8p1:Right z:Id="i21" i:type="d5p1:EncodedSystemTableField">
+                    <d5p1:Value>#:#system#:#Requests#:#Requests#:#ComponentId#:#</d5p1:Value>
+                  </d8p1:Right>
+                </d8p1:Left>
+                <d8p1:Operator>Or</d8p1:Operator>
+                <d8p1:Right z:Id="i22" i:type="d8p1:DataSetCondition">
+                  <d8p1:Left z:Id="i23" i:type="d5p1:EncodedSystemTableField">
+                    <d5p1:Value>#:#system#:#Activities#:#Activities#:#RootComponentId#:#</d5p1:Value>
+                  </d8p1:Left>
+                  <d8p1:Operator>Equals</d8p1:Operator>
+                  <d8p1:Right z:Id="i24" i:type="d5p1:EncodedSystemTableField">
+                    <d5p1:Value>#:#system#:#Requests#:#Requests#:#ComponentId#:#</d5p1:Value>
+                  </d8p1:Right>
+                </d8p1:Right>
+              </d6p1:JoinCondition>
+              <d6p1:Table i:type="d6p1:SystemTable">
+                <d6p1:Alias>Activities</d6p1:Alias>
+                <d6p1:TableId>Activities</d6p1:TableId>
+              </d6p1:Table>
+            </d6p1:JoinedTable>
+            <d6p1:JoinedTable>
+              <d6p1:JoinCondition xmlns:d8p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i25" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <d8p1:Left z:Id="i26" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Form Answers#:#FormAnswers#:#FormId#:#</d5p1:Value>
+                </d8p1:Left>
+                <d8p1:Operator>Equals</d8p1:Operator>
+                <d8p1:Right z:Id="i27" i:type="d5p1:EncodedSystemTableField">
+                  <d5p1:Value>#:#system#:#Requests#:#Requests#:#FormIdFk#:#</d5p1:Value>
+                </d8p1:Right>
+              </d6p1:JoinCondition>
+              <d6p1:Table i:type="d6p1:SystemTable">
+                <d6p1:Alias>Form Answers</d6p1:Alias>
+                <d6p1:TableId>FormAnswers</d6p1:TableId>
+              </d6p1:Table>
+            </d6p1:JoinedTable>
+          </d5p1:Joined>
+          <d5p1:QueryLimit>500</d5p1:QueryLimit>
+          <d5p1:ReferenceForm xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers">
+            <d6p1:Id>15</d6p1:Id>
+            <d6p1:Name>datetime-timezone-spike</d6p1:Name>
+          </d5p1:ReferenceForm>
+          <d5p1:RuntimeParameters i:nil="true" />
+          <d5p1:SelectFields>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>System Id (Requests)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Requests#:#Requests#:#Id#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Name (Requests)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Requests#:#Requests#:#Name#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Client Name (Requests)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Requests#:#Requests#:#ClientName#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Matter Name (Requests)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#system#:#Requests#:#Requests#:#MatterName#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+            <d5p1:SelectExpression>
+              <d5p1:ColumnName>Date_Date_Only (Form Answers)</d5p1:ColumnName>
+              <d5p1:Expression>[#:#answer#:#Form Answers#:#Date_Date_Only#:#DateInput#:#]</d5p1:Expression>
+            </d5p1:SelectExpression>
+          </d5p1:SelectFields>
+          <d5p1:SortFields i:nil="true" />
+          <d5p1:Source xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" i:type="d6p1:SystemTable">
+            <d6p1:Alias>Requests</d6p1:Alias>
+            <d6p1:TableId>Requests</d6p1:TableId>
+          </d5p1:Source>
+        </d2p1:DslQuerySettings>
+        <d2p1:RunAsDSLQuery>true</d2p1:RunAsDSLQuery>
+      </d2p1:QueryBuilder>
+      <d2p1:QueryIntegrationObjectType>None</d2p1:QueryIntegrationObjectType>
+      <d2p1:QueryIntegrationType>Datatable</d2p1:QueryIntegrationType>
+      <d2p1:useDeletedFlagForParties>true</d2p1:useDeletedFlagForParties>
+    </d2p1:QueryIntegration>
+  </QueryIntegrations>
+  <RequirementGroups xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Requests">
+    <d2p1:RequestRequirementGroup>
+      <d2p1:Id>1</d2p1:Id>
+      <d2p1:Key>A</d2p1:Key>
+      <d2p1:Name>Always</d2p1:Name>
+      <d2p1:SortOrder i:nil="true" />
+    </d2p1:RequestRequirementGroup>
+  </RequirementGroups>
+  <SchemaVersion>2400</SchemaVersion>
+  <ScoreDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Scores" />
+  <ScoreLevelSets xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Scores" />
+  <TeamRoles xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <Users xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Entities" />
+  <VirtualTables xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.VirtualTables" />
+  <WorkflowDefinitions xmlns:d2p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Workflows" />
+</TemplateDefinition>

@@ -1,0 +1,19 @@
+SELECT
+TOP 500
+     [Clients].[Id] AS [0],
+     [Clients].[Name] AS [1],
+     [Clients].[ClientId] AS [2],
+     [Client Statuses].[Name] AS [3],
+     [Addresses].[City] AS [4],
+     [Addresses].[State] AS [5]
+FROM
+     [dbo].[Clients] AS [Clients]
+     LEFT OUTER JOIN [dbo].[Addresses] AS [Addresses] ON [Addresses].[Entity_Id] = [Clients].[Id]
+
+     INNER JOIN [dbo].[ClientStatuses] AS [Client Statuses] ON [Client Statuses].[Id] = [Clients].[Status_Id]
+
+
+WHERE 
+     ([Client Statuses].[Key] IN (@p__dsl__p1_0,@p__dsl__p1_1) AND [Clients].[Name] LIKE '%' + @p__dsl__p2 + '%' AND [Clients].[ClientId] LIKE '%' + @p__dsl__p3 + '%') OR ([Client Statuses].[Key] IN (@p__dsl__p1_0,@p__dsl__p1_1) AND [Clients].[Name] LIKE '%' + @p__dsl__p2 + '%') OR ([Client Statuses].[Key] IN (@p__dsl__p1_0,@p__dsl__p1_1) AND [Clients].[ClientId] LIKE '%' + @p__dsl__p3 + '%')
+ORDER BY 
+     [Clients].[Name] ASC

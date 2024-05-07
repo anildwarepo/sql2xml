@@ -1,0 +1,158 @@
+<QueryIntegration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations">
+  <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">1040</Id>
+  <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+  <Active>true</Active>
+  <DatasourceId>2</DatasourceId>
+  <Draft>false</Draft>
+  <IgnoreClientMatterSecurity>false</IgnoreClientMatterSecurity>
+  <IsIntegrationTypeUserSelected>false</IsIntegrationTypeUserSelected>
+  <Name>Get Active Clients with Search Term V2</Name>
+  <QueryBuilder i:type="OpenLinkQueryBuilder">
+    <DataSetSettings xmlns:d3p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" i:type="d3p1:DataSetSettings">
+      <d3p1:AdvancedExpression i:nil="true" />
+      <d3p1:AggregationFunction xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+      <d3p1:CollectionType>All</d3p1:CollectionType>
+      <d3p1:ComputedFieldFlags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+      <d3p1:DataSourceId i:nil="true" />
+      <d3p1:ExternalParameters xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.ExternalParameters" />
+      <d3p1:FieldColumnTitles xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+      <d3p1:FieldNames xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <d3p1:OperationId i:nil="true" />
+      <d3p1:ParameterExpressions />
+      <d3p1:ReturnDistinctRows>false</d3p1:ReturnDistinctRows>
+    </DataSetSettings>
+    <DslQuerySettings xmlns:d3p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings">
+      <d3p1:AggregationFunction xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+      <d3p1:ComplexSourceQuestion xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+      <d3p1:Conditions xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions">
+        <d4p1:AdvancedExpression>(1 AND 2 AND 3) OR (1 AND 2) OR (1 AND 3)</d4p1:AdvancedExpression>
+        <d4p1:CollectionType>Advanced</d4p1:CollectionType>
+        <d4p1:Conditions>
+          <d4p1:DataSetFilterCondition z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d4p1:Left z:Id="i2" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Client Statuses#:#ClientStatuses#:#Key#:#</d3p1:Value>
+            </d4p1:Left>
+            <d4p1:Operator>In</d4p1:Operator>
+            <d4p1:Right z:Id="i3" i:type="d4p1:ParameterOperand">
+              <d4p1:DefaultValue xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:type="d8p1:ArrayOfKeyValueOfstringstring">
+                <d8p1:KeyValueOfstringstring>
+                  <d8p1:Key>Active</d8p1:Key>
+                  <d8p1:Value>Active</d8p1:Value>
+                </d8p1:KeyValueOfstringstring>
+                <d8p1:KeyValueOfstringstring>
+                  <d8p1:Key>Open</d8p1:Key>
+                  <d8p1:Value>Open</d8p1:Value>
+                </d8p1:KeyValueOfstringstring>
+              </d4p1:DefaultValue>
+              <d4p1:External>false</d4p1:External>
+              <d4p1:Name>p1</d4p1:Name>
+              <d4p1:ValueType>Dictionary</d4p1:ValueType>
+            </d4p1:Right>
+            <d4p1:OrdinalIdx>1</d4p1:OrdinalIdx>
+          </d4p1:DataSetFilterCondition>
+          <d4p1:DataSetFilterCondition z:Id="i4" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d4p1:Left z:Id="i5" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Clients#:#Clients#:#Name#:#</d3p1:Value>
+            </d4p1:Left>
+            <d4p1:Operator>Contains</d4p1:Operator>
+            <d4p1:Right z:Id="i6" i:type="d4p1:ParameterOperand">
+              <d4p1:DefaultValue i:nil="true" />
+              <d4p1:External>true</d4p1:External>
+              <d4p1:Name>p2</d4p1:Name>
+              <d4p1:ValueType>String</d4p1:ValueType>
+            </d4p1:Right>
+            <d4p1:OrdinalIdx>2</d4p1:OrdinalIdx>
+          </d4p1:DataSetFilterCondition>
+          <d4p1:DataSetFilterCondition z:Id="i7" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d4p1:Left z:Id="i8" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Clients#:#Clients#:#ClientId#:#</d3p1:Value>
+            </d4p1:Left>
+            <d4p1:Operator>Contains</d4p1:Operator>
+            <d4p1:Right z:Id="i9" i:type="d4p1:ParameterOperand">
+              <d4p1:DefaultValue i:nil="true" />
+              <d4p1:External>true</d4p1:External>
+              <d4p1:Name>p3</d4p1:Name>
+              <d4p1:ValueType>String</d4p1:ValueType>
+            </d4p1:Right>
+            <d4p1:OrdinalIdx>3</d4p1:OrdinalIdx>
+          </d4p1:DataSetFilterCondition>
+        </d4p1:Conditions>
+      </d3p1:Conditions>
+      <d3p1:Description i:nil="true" />
+      <d3p1:Distinct>false</d3p1:Distinct>
+      <d3p1:EnforceSecurity>true</d3p1:EnforceSecurity>
+      <d3p1:ExternalParameters i:nil="true" />
+      <d3p1:FormAnswerConditions xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" i:nil="true" />
+      <d3p1:Joined xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source">
+        <d4p1:JoinedTable>
+          <d4p1:JoinCondition xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i10" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d6p1:Left z:Id="i11" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Addresses#:#Addresses#:#EntityIdFk#:#</d3p1:Value>
+            </d6p1:Left>
+            <d6p1:Operator>Equals</d6p1:Operator>
+            <d6p1:Right z:Id="i12" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Clients#:#Clients#:#Id#:#</d3p1:Value>
+            </d6p1:Right>
+          </d4p1:JoinCondition>
+          <d4p1:Table i:type="d4p1:SystemTable">
+            <d4p1:Alias>Addresses</d4p1:Alias>
+            <d4p1:TableId>Addresses</d4p1:TableId>
+          </d4p1:Table>
+        </d4p1:JoinedTable>
+        <d4p1:JoinedTable>
+          <d4p1:JoinCondition xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i13" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d6p1:Left z:Id="i14" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Client Statuses#:#ClientStatuses#:#Id#:#</d3p1:Value>
+            </d6p1:Left>
+            <d6p1:Operator>Equals</d6p1:Operator>
+            <d6p1:Right z:Id="i15" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Clients#:#Clients#:#StatusIdFk#:#</d3p1:Value>
+            </d6p1:Right>
+          </d4p1:JoinCondition>
+          <d4p1:Table i:type="d4p1:SystemTable">
+            <d4p1:Alias>Client Statuses</d4p1:Alias>
+            <d4p1:TableId>ClientStatuses</d4p1:TableId>
+          </d4p1:Table>
+        </d4p1:JoinedTable>
+      </d3p1:Joined>
+      <d3p1:QueryLimit>500</d3p1:QueryLimit>
+      <d3p1:ReferenceForm xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:nil="true" />
+      <d3p1:RuntimeParameters i:nil="true" />
+      <d3p1:SelectFields>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Key</d3p1:ColumnName>
+          <d3p1:Expression>[#:#system#:#Clients#:#Clients#:#Id#:#]</d3p1:Expression>
+        </d3p1:SelectExpression>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Value</d3p1:ColumnName>
+          <d3p1:Expression>[#:#system#:#Clients#:#Clients#:#Name#:#] + ' || ' + 
+[#:#system#:#Clients#:#Clients#:#ClientId#:#] + ' || ' + 
+[#:#system#:#Client Statuses#:#ClientStatuses#:#Name#:#] + ' || ' +
+
+CASE 
+	WHEN [#:#system#:#Addresses#:#Addresses#:#City#:#] is null AND [#:#system#:#Addresses#:#Addresses#:#State#:#] is null 
+    THEN ''
+    ELSE [#:#system#:#Addresses#:#Addresses#:#City#:#] + ', ' + [#:#system#:#Addresses#:#Addresses#:#State#:#]
+ END
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+      </d3p1:SelectFields>
+      <d3p1:SortFields>
+        <d3p1:SortField>
+          <d3p1:Direction>ASCENDING</d3p1:Direction>
+          <d3p1:Field z:Id="i16" i:type="d3p1:EncodedSystemTableField" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d3p1:Value>#:#system#:#Clients#:#Clients#:#Name#:#</d3p1:Value>
+          </d3p1:Field>
+        </d3p1:SortField>
+      </d3p1:SortFields>
+      <d3p1:Source xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" i:type="d4p1:SystemTable">
+        <d4p1:Alias>Clients</d4p1:Alias>
+        <d4p1:TableId>Clients</d4p1:TableId>
+      </d3p1:Source>
+    </DslQuerySettings>
+    <RunAsDSLQuery>true</RunAsDSLQuery>
+  </QueryBuilder>
+  <QueryIntegrationObjectType>Client</QueryIntegrationObjectType>
+  <QueryIntegrationType>KeyValue</QueryIntegrationType>
+  <useDeletedFlagForParties>true</useDeletedFlagForParties>
+</QueryIntegration>

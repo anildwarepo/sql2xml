@@ -1,0 +1,176 @@
+<QueryIntegration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.Integrations">
+  <Id xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">1030</Id>
+  <SchemaVersion xmlns="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model">3700</SchemaVersion>
+  <Active>true</Active>
+  <DatasourceId>2</DatasourceId>
+  <Draft>false</Draft>
+  <IgnoreClientMatterSecurity>false</IgnoreClientMatterSecurity>
+  <IsIntegrationTypeUserSelected>false</IsIntegrationTypeUserSelected>
+  <Name>Terms Approval Summary V2</Name>
+  <QueryBuilder i:type="OpenLinkQueryBuilder">
+    <DataSetSettings xmlns:d3p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets" i:type="d3p1:DataSetSettings">
+      <d3p1:AdvancedExpression i:nil="true" />
+      <d3p1:AggregationFunction xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+      <d3p1:CollectionType>All</d3p1:CollectionType>
+      <d3p1:ComputedFieldFlags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+      <d3p1:DataSourceId i:nil="true" />
+      <d3p1:ExternalParameters xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.ExternalParameters" />
+      <d3p1:FieldColumnTitles xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+      <d3p1:FieldNames xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <d3p1:OperationId i:nil="true" />
+      <d3p1:ParameterExpressions />
+      <d3p1:ReturnDistinctRows>false</d3p1:ReturnDistinctRows>
+    </DataSetSettings>
+    <DslQuerySettings xmlns:d3p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings">
+      <d3p1:AggregationFunction xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.AggregationFunctions" i:nil="true" />
+      <d3p1:ComplexSourceQuestion xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers">
+        <d4p1:Name>Terms Grid for SME</d4p1:Name>
+        <d4p1:Type>Grid</d4p1:Type>
+      </d3p1:ComplexSourceQuestion>
+      <d3p1:Conditions xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions">
+        <d4p1:AdvancedExpression i:nil="true" />
+        <d4p1:CollectionType>All</d4p1:CollectionType>
+        <d4p1:Conditions>
+          <d4p1:DataSetFilterCondition z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d4p1:Left z:Id="i2" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests#:#Requests#:#Id#:#</d3p1:Value>
+            </d4p1:Left>
+            <d4p1:Operator>Equals</d4p1:Operator>
+            <d4p1:Right z:Id="i3" i:type="d4p1:ParameterOperand">
+              <d4p1:DefaultValue i:nil="true" />
+              <d4p1:External>true</d4p1:External>
+              <d4p1:Name>p0</d4p1:Name>
+              <d4p1:ValueType>Integer</d4p1:ValueType>
+            </d4p1:Right>
+            <d4p1:OrdinalIdx>1</d4p1:OrdinalIdx>
+          </d4p1:DataSetFilterCondition>
+        </d4p1:Conditions>
+      </d3p1:Conditions>
+      <d3p1:Description i:nil="true" />
+      <d3p1:Distinct>false</d3p1:Distinct>
+      <d3p1:EnforceSecurity>true</d3p1:EnforceSecurity>
+      <d3p1:ExternalParameters i:nil="true" />
+      <d3p1:FormAnswerConditions xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions">
+        <d4p1:AdvancedExpression i:nil="true" />
+        <d4p1:CollectionType>All</d4p1:CollectionType>
+        <d4p1:Conditions>
+          <d4p1:DataSetFilterCondition z:Id="i4" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d4p1:Left z:Id="i5" xmlns:d7p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:type="d7p1:EncodedAnswerField">
+              <d3p1:Value>#:#answer#:#Form Answers#:#TermsGrid_Name#:#TextInput#:#</d3p1:Value>
+            </d4p1:Left>
+            <d4p1:Operator>IsNotNull</d4p1:Operator>
+            <d4p1:Right i:nil="true" />
+            <d4p1:OrdinalIdx>1</d4p1:OrdinalIdx>
+          </d4p1:DataSetFilterCondition>
+        </d4p1:Conditions>
+      </d3p1:FormAnswerConditions>
+      <d3p1:Joined xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source">
+        <d4p1:JoinedTable>
+          <d4p1:JoinCondition xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i6" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d6p1:Left z:Id="i7" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests 1_##_SubRequests#:#SubRequests#:#ParentRequestIdFk#:#</d3p1:Value>
+            </d6p1:Left>
+            <d6p1:Operator>Equals</d6p1:Operator>
+            <d6p1:Right z:Id="i8" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests#:#Requests#:#Id#:#</d3p1:Value>
+            </d6p1:Right>
+          </d4p1:JoinCondition>
+          <d4p1:Table i:type="d4p1:SystemTable">
+            <d4p1:Alias>Requests 1_##_SubRequests</d4p1:Alias>
+            <d4p1:TableId>SubRequests</d4p1:TableId>
+          </d4p1:Table>
+        </d4p1:JoinedTable>
+        <d4p1:JoinedTable>
+          <d4p1:JoinCondition xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i9" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d6p1:Left z:Id="i10" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests 1_##_Requests#:#Requests#:#Id#:#</d3p1:Value>
+            </d6p1:Left>
+            <d6p1:Operator>Equals</d6p1:Operator>
+            <d6p1:Right z:Id="i11" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests 1_##_SubRequests#:#SubRequests#:#SubRequestIdFk#:#</d3p1:Value>
+            </d6p1:Right>
+          </d4p1:JoinCondition>
+          <d4p1:Table i:type="d4p1:SystemTable">
+            <d4p1:Alias>Requests 1_##_Requests</d4p1:Alias>
+            <d4p1:TableId>Requests</d4p1:TableId>
+          </d4p1:Table>
+        </d4p1:JoinedTable>
+        <d4p1:JoinedTable>
+          <d4p1:JoinCondition xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Conditions" z:Id="i12" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d6p1:Left z:Id="i13" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Form Answers#:#FormAnswers#:#FormId#:#</d3p1:Value>
+            </d6p1:Left>
+            <d6p1:Operator>Equals</d6p1:Operator>
+            <d6p1:Right z:Id="i14" i:type="d3p1:EncodedSystemTableField">
+              <d3p1:Value>#:#system#:#Requests 1_##_Requests#:#Requests#:#FormIdFk#:#</d3p1:Value>
+            </d6p1:Right>
+          </d4p1:JoinCondition>
+          <d4p1:Table i:type="d4p1:SystemTable">
+            <d4p1:Alias>Form Answers</d4p1:Alias>
+            <d4p1:TableId>FormAnswers</d4p1:TableId>
+          </d4p1:Table>
+        </d4p1:JoinedTable>
+      </d3p1:Joined>
+      <d3p1:QueryLimit>500</d3p1:QueryLimit>
+      <d3p1:ReferenceForm xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers">
+        <d4p1:Id>14</d4p1:Id>
+        <d4p1:Name i:nil="true" />
+      </d3p1:ReferenceForm>
+      <d3p1:RuntimeParameters i:nil="true" />
+      <d3p1:SelectFields>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Category</d3p1:ColumnName>
+          <d3p1:Expression>[#:#answer#:#Form Answers#:#TermsGrid_Category#:#TextInput#:#]
+
+
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Term</d3p1:ColumnName>
+          <d3p1:Expression>[#:#answer#:#Form Answers#:#TermsGrid_TermsLink#:#TextInput#:#]
+
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Selected Text</d3p1:ColumnName>
+          <d3p1:Expression>[#:#answer#:#Form Answers#:#TermsGrid_TermSelectedText#:#TextInput#:#]
+
+
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Approved?</d3p1:ColumnName>
+          <d3p1:Expression>case when [#:#answer#:#Form Answers#:#TermsGrid_Approved#:#BooleanRadioButtonInput#:#] = true then 'yes'
+when [#:#answer#:#Form Answers#:#TermsGrid_Approved#:#BooleanRadioButtonInput#:#] = false then 'no'
+end
+
+
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+        <d3p1:SelectExpression>
+          <d3p1:ColumnName>Approver Notes</d3p1:ColumnName>
+          <d3p1:Expression>[#:#answer#:#Form Answers#:#TermsGrid_ApproverNotes#:#TextInput#:#]
+
+
+</d3p1:Expression>
+        </d3p1:SelectExpression>
+      </d3p1:SelectFields>
+      <d3p1:SortFields>
+        <d3p1:SortField>
+          <d3p1:Direction>ASCENDING</d3p1:Direction>
+          <d3p1:Field z:Id="i15" xmlns:d6p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.FormAnswers" i:type="d6p1:EncodedAnswerField" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+            <d3p1:Value>#:#answer#:#Form Answers#:#TermsGrid_Category#:#TextInput#:#</d3p1:Value>
+          </d3p1:Field>
+        </d3p1:SortField>
+      </d3p1:SortFields>
+      <d3p1:Source xmlns:d4p1="http://schemas.datacontract.org/2004/07/IntApp.Wilco.Model.DataSets.DSL.QuerySettings.Source" i:type="d4p1:SystemTable">
+        <d4p1:Alias>Requests</d4p1:Alias>
+        <d4p1:TableId>Requests</d4p1:TableId>
+      </d3p1:Source>
+    </DslQuerySettings>
+    <RunAsDSLQuery>true</RunAsDSLQuery>
+  </QueryBuilder>
+  <QueryIntegrationObjectType>None</QueryIntegrationObjectType>
+  <QueryIntegrationType>Datatable</QueryIntegrationType>
+  <useDeletedFlagForParties>true</useDeletedFlagForParties>
+</QueryIntegration>
